@@ -12,6 +12,8 @@ class CustomMealsTVCell: UITableViewCell {
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var raitingLbl: UILabel!
     @IBOutlet weak var subTitleLbl: UILabel!
+    @IBOutlet weak var imageCell: UIImageView!
+    
     
     
     
