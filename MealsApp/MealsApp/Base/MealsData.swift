@@ -15,9 +15,11 @@ class MealsData {
     var meals: [Meal]
     
     private init () {
-        meals = [Meal(name: "Pizza", price: 5.99, image: #imageLiteral(resourceName: "20150918160532-pizza") ),
-                 Meal(name: "Sushi", price: 10.99, image: #imageLiteral(resourceName: "sushi-polesnie-1") ),
-                 Meal(name: "Carbonara", price: 3.99, image: #imageLiteral(resourceName: "Italian-enough-pasta-carbonara-2") )]
+        meals = [Meal(name: "Pizza", price: 5.99, image: #imageLiteral(resourceName: "20150918160532-pizza")),
+                 Meal(name: "Sushi", price: 10.99, image: #imageLiteral(resourceName: "sushi-polesnie-1")),
+                 Meal(name: "Carbonara", price: 3.99, image: #imageLiteral(resourceName: "Italian-enough-pasta-carbonara-2"))]
     }
+    
+     
     
 }

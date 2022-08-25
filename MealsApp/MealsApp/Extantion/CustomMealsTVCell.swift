@@ -10,7 +10,7 @@ import UIKit
 class CustomMealsTVCell: UITableViewCell {
 
     @IBOutlet weak var nameLbl: UILabel!
-    @IBOutlet weak var raitingLbl: UILabel!
+    @IBOutlet weak var feedback: CosmosView!
     @IBOutlet weak var subTitleLbl: UILabel!
     @IBOutlet weak var imageCell: UIImageView!
     
@@ -19,7 +19,7 @@ class CustomMealsTVCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        feedback.updateOnTouch = false
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
