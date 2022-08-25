@@ -35,6 +35,10 @@ class DitailMealsVC: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        viewReviewOutlet.isEnabled = !meal.comments.isEmpty
+    }
+    
     func updateView() {
         imageMeal.image = meal.image
         title = meal.name
@@ -56,14 +60,16 @@ class DitailMealsVC: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if let cv = segue.destination as? CommitVC {
+            cv.indexPath = indexPath
+        }
+        
+        if let cv = segue.destination as? AllCommentTVC {
+            cv.indexPath = indexPath
+        }
+        
     }
-    */
 
 }

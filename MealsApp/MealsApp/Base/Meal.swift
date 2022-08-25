@@ -13,6 +13,7 @@ struct Meal {
     let image: UIImage?
     
     var feedBacks: [Double] = []
+    var comments: [String] = []
     
     var ratingBar: Double {
         if let rating = rating {

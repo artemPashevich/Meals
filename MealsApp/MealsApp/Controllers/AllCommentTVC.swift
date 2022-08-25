@@ -1,18 +1,18 @@
 //
-//  MealsTVC.swift
+//  AllCommentTVC.swift
 //  MealsApp
 //
-//  Created by Артем Пашевич on 23.08.22.
+//  Created by Артем Пашевич on 25.08.22.
 //
 
 import UIKit
 
-class MealsTVC: UITableViewController {
-    
-    var meals: [Meal] {
-        MealsData.shared.meals
-    }
+class AllCommentTVC: UITableViewController {
 
+    var indexPath: Int!
+    var meal: Meal {
+        MealsData.shared.meals[indexPath]
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
@@ -20,33 +20,32 @@ class MealsTVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+
+    
     
     
     // MARK: - Table view data source
 
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return meals.count
+        return meal.comments.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? CustomMealsTVCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CellAllComment", for: indexPath)
 
-        let meal = meals[indexPath.row]
-        
-        cell?.nameLbl.text = meal.name
-        cell?.subTitleLbl.text = String(meal.price) + "$"
-        cell?.imageCell.image = meal.image
-        cell?.feedback.rating = meal.ratingBar
-        return cell!
+        cell.textLabel?.text = meal.comments[indexPath.row]
+
+        return cell
     }
     
 
@@ -85,16 +84,14 @@ class MealsTVC: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let ditailMealCV = segue.destination as? DitailMealsVC,
-           let indexPath = tableView.indexPathForSelectedRow {
-            ditailMealCV.indexPath = indexPath.row
-        }
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
-    
-    
+    */
 
 }
