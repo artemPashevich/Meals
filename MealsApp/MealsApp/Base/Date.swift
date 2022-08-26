@@ -7,17 +7,15 @@
 
 import Foundation
 
-struct Feedback {
+struct DateComment {
     
     private let date = Date()
-    
-    let comment: String
     
     var dateString: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .short
-        dateFormatter.locale = Locale(identifier: "ru_Ru")
+        dateFormatter.dateFormat = "MM-dd-yyyy"
         return dateFormatter.string(from: date)
     }
     

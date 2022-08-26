@@ -203,7 +203,7 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Leave a new review"/>
                                         <connections>
                                             <action selector="leaveReview:" destination="P92-QZ-YWZ" eventType="touchUpInside" id="V1s-4v-kYy"/>
-                                            <segue destination="ght-iF-GOp" kind="modal" id="Pyv-sF-BOZ"/>
+                                            <segue destination="ght-iF-GOp" kind="show" id="EmO-zF-SZ3"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -243,13 +243,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellAllComment" id="Zhu-a1-wrt">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellAllComment" rowHeight="57" id="Zhu-a1-wrt" customClass="CommentCustomTVCell" customModule="MealsApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zhu-a1-wrt" id="UOQ-AI-aOL">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="57"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bcr-5X-srM">
+                                            <rect key="frame" x="356" y="18" width="38" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csa-mq-9Sq">
+                                            <rect key="frame" x="20" y="18" width="213" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="213" id="BQr-cz-Xyj"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Bcr-5X-srM" firstAttribute="trailing" secondItem="UOQ-AI-aOL" secondAttribute="trailingMargin" id="6ZD-Ea-3ZC"/>
+                                        <constraint firstItem="Csa-mq-9Sq" firstAttribute="leading" secondItem="UOQ-AI-aOL" secondAttribute="leadingMargin" id="Evh-FW-5ki"/>
+                                        <constraint firstItem="Csa-mq-9Sq" firstAttribute="top" secondItem="UOQ-AI-aOL" secondAttribute="topMargin" constant="7" id="Kgq-Hv-mMT"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Csa-mq-9Sq" secondAttribute="bottom" constant="7" id="SYK-L3-wjx"/>
+                                        <constraint firstItem="Bcr-5X-srM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Csa-mq-9Sq" secondAttribute="trailing" constant="8" symbolic="YES" id="UTf-DY-TZZ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Bcr-5X-srM" secondAttribute="bottom" constant="7" id="aob-Jm-Kvq"/>
+                                        <constraint firstItem="Bcr-5X-srM" firstAttribute="top" secondItem="UOQ-AI-aOL" secondAttribute="topMargin" constant="7" id="smT-pW-h7E"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="comment" destination="Csa-mq-9Sq" id="2vN-Ya-XE7"/>
+                                    <outlet property="time" destination="Bcr-5X-srM" id="kSe-rb-EkQ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -261,18 +291,18 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pfp-yu-4AF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1954" y="-451"/>
+            <point key="canvasLocation" x="1953.6231884057972" y="-451.33928571428567"/>
         </scene>
-        <!--CommitVC-->
+        <!--Your comment-->
         <scene sceneID="Py6-EV-dhA">
             <objects>
                 <viewController id="ght-iF-GOp" customClass="CommitVC" customModule="MealsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZwA-Ca-e64">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="EY6-dW-ypC">
-                                <rect key="frame" x="35" y="59" width="344" height="259"/>
+                                <rect key="frame" x="35" y="113" width="344" height="259"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leave your feedback" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfc-P6-Drv">
                                         <rect key="frame" x="0.0" y="0.0" width="344" height="21.5"/>
@@ -316,12 +346,12 @@
                         <viewLayoutGuide key="safeArea" id="Nly-fg-Y1v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="EY6-dW-ypC" firstAttribute="top" secondItem="Nly-fg-Y1v" secondAttribute="top" constant="15" id="Wbc-pK-4Oo"/>
+                            <constraint firstItem="EY6-dW-ypC" firstAttribute="top" secondItem="Nly-fg-Y1v" secondAttribute="top" constant="25" id="Wbc-pK-4Oo"/>
                             <constraint firstItem="EY6-dW-ypC" firstAttribute="leading" secondItem="Nly-fg-Y1v" secondAttribute="leading" constant="35" id="jrn-wx-b7e"/>
                             <constraint firstItem="Nly-fg-Y1v" firstAttribute="trailing" secondItem="EY6-dW-ypC" secondAttribute="trailing" constant="35" id="wno-77-x8a"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="tTp-hx-x7a"/>
+                    <navigationItem key="navigationItem" title="Your comment" id="tTp-hx-x7a"/>
                     <connections>
                         <outlet property="commentBtn" destination="kFl-mD-vjD" id="gEg-CQ-EMK"/>
                         <outlet property="errorLbl" destination="Qny-DR-jBL" id="rHt-4H-RIg"/>

@@ -14,6 +14,8 @@ class AllCommentTVC: UITableViewController {
         MealsData.shared.meals[indexPath]
     }
     
+    let date = DateComment()
+    
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
     }
@@ -41,11 +43,12 @@ class AllCommentTVC: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellAllComment", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CellAllComment", for: indexPath) as? CommentCustomTVCell
 
-        cell.textLabel?.text = meal.comments[indexPath.row]
-
-        return cell
+            cell?.comment.text = meal.comments[indexPath.row]
+            cell?.time.text = date.dateString
+        
+        return cell!
     }
     
 

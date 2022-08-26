@@ -19,8 +19,9 @@
 		A52F735C28B6180A00C05689 /* DitailMealsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52F735B28B6180A00C05689 /* DitailMealsVC.swift */; };
 		A52F736028B62C5500C05689 /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52F735F28B62C5500C05689 /* CosmosDistrib.swift */; };
 		A52F736228B76B3C00C05689 /* CommitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52F736128B76B3B00C05689 /* CommitVC.swift */; };
-		A52F736428B78EBA00C05689 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52F736328B78EB900C05689 /* Feedback.swift */; };
+		A52F736428B78EBA00C05689 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52F736328B78EB900C05689 /* Date.swift */; };
 		A52F736628B794FA00C05689 /* AllCommentTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52F736528B794FA00C05689 /* AllCommentTVC.swift */; };
+		A52F736828B8971300C05689 /* CommentCustomTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52F736728B8971200C05689 /* CommentCustomTVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +39,9 @@
 		A52F735B28B6180A00C05689 /* DitailMealsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DitailMealsVC.swift; sourceTree = "<group>"; };
 		A52F735F28B62C5500C05689 /* CosmosDistrib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
 		A52F736128B76B3B00C05689 /* CommitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitVC.swift; sourceTree = "<group>"; };
-		A52F736328B78EB900C05689 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
+		A52F736328B78EB900C05689 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		A52F736528B794FA00C05689 /* AllCommentTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCommentTVC.swift; sourceTree = "<group>"; };
+		A52F736728B8971200C05689 /* CommentCustomTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCustomTVCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,7 @@
 			children = (
 				A52F735628B5F14E00C05689 /* MealsData.swift */,
 				A52F735828B5F20300C05689 /* Meal.swift */,
-				A52F736328B78EB900C05689 /* Feedback.swift */,
+				A52F736328B78EB900C05689 /* Date.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -119,6 +121,7 @@
 			children = (
 				A52F734D28B43DF600C05689 /* CustomMealsTVCell.swift */,
 				A52F735F28B62C5500C05689 /* CosmosDistrib.swift */,
+				A52F736728B8971200C05689 /* CommentCustomTVCell.swift */,
 			);
 			path = Extantion;
 			sourceTree = "<group>";
@@ -198,12 +201,13 @@
 			files = (
 				A52F735C28B6180A00C05689 /* DitailMealsVC.swift in Sources */,
 				A52F735728B5F14E00C05689 /* MealsData.swift in Sources */,
-				A52F736428B78EBA00C05689 /* Feedback.swift in Sources */,
+				A52F736428B78EBA00C05689 /* Date.swift in Sources */,
 				A52F735028B4408800C05689 /* MealsTVC.swift in Sources */,
 				A52F736028B62C5500C05689 /* CosmosDistrib.swift in Sources */,
 				A52F733928B4395000C05689 /* AppDelegate.swift in Sources */,
 				A52F736228B76B3C00C05689 /* CommitVC.swift in Sources */,
 				A52F733B28B4395000C05689 /* SceneDelegate.swift in Sources */,
+				A52F736828B8971300C05689 /* CommentCustomTVCell.swift in Sources */,
 				A52F735928B5F20300C05689 /* Meal.swift in Sources */,
 				A52F734E28B43DF600C05689 /* CustomMealsTVCell.swift in Sources */,
 				A52F736628B794FA00C05689 /* AllCommentTVC.swift in Sources */,

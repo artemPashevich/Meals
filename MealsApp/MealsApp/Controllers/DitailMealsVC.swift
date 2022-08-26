@@ -55,8 +55,6 @@ class DitailMealsVC: UIViewController {
             MealsData.shared.meals[self.indexPath].feedBacks.append(rating)
             print(rating)
         }
-        
-        // Do any additional setup after loading the view.
     }
     
 

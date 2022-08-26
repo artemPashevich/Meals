@@ -17,7 +17,7 @@ class CommitVC: UIViewController {
     
     @IBAction func saveComment(_ sender: UIButton) {
         MealsData.shared.meals[indexPath].comments.append(textViewFeedback.text)
-        self.dismiss(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     
     
